@@ -14,12 +14,15 @@ const App = (props) => {
   }, [count]);
   return (
     <div>
-      <p>hello</p>
+      <p>{props.count}</p>
       <button onClick={handleClick}>increase</button>
     </div>
   );
 };
-const mapStateToProps = (state) => ({
-  count: state.count,
-});
+const mapStateToProps = (state) => {
+  console.log('state data : ', state);
+  return {
+    count: state.file.count,
+  };
+};
 export default connect(mapStateToProps, { increaseCount })(App);
