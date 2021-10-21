@@ -1,0 +1,12 @@
+h1,
+p {
+  font-family: Lato;
+}
+
+.errorClass {
+  color: red;
+}
+
+.displayAlign {
+  display: flex;
+}
